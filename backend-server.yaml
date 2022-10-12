@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+spec:
+  replicas: 1
+  selector:
+    matchlabels:
+      type: backend
+  template:
+    metadata:
+      
+      labels:
+        type: backend
+    spec:
+      containers:
+      - name: backend-server
+        image: kar0169/nodeapp-server:1.0
+        ports:
+        - containerPort: 5000
