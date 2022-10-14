@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchlabels:
+    matchLabels:
       type: frontend
   template:
     metadata:
@@ -15,6 +15,8 @@ spec:
     spec:
       containers:
       - name: frontend-app
-        image: kar0169/nodeapp-app:1.0
+        image: kar0169/nodeapp-app:2.0
         ports:
         - containerPort: 3000
+        imagePullPolicy: IfNotPresent
+      

@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchlabels:
+    matchLabels:
       type: backend
   template:
     metadata:
@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
       - name: backend-server
-        image: kar0169/nodeapp-server:1.0
+        image: kar0169/nodeapp-server:3.0
         ports:
         - containerPort: 5000
+        imagePullPolicy: IfNotPresent

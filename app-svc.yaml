@@ -5,7 +5,9 @@ metadata:
 spec:
   selector:
     type: frontend
+  type: NodePort
   ports:
     - protocol: TCP
       port: 3000
       targetPort: 3000
+      nodePort: 31000
